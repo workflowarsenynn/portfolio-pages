@@ -213,27 +213,27 @@ const PROJECTS = [
     },
     images: [
       {
-        src: "../images/hhbot/architecture-layers.png",
+        src: "../images/hhbot/architecture-layers.webp",
         alt: "Пятислойная архитектура HHBot browser-first automation platform",
         caption: "Пятислойная архитектура: runtime, browser automation, decision layer, state/audit/safety и notification layer."
       },
       {
-        src: "../images/hhbot/safety-layer.png",
+        src: "../images/hhbot/safety-layer.webp",
         alt: "Safety layer и CLI-восстановление HHBot",
         caption: "Safety Layer и CLI-восстановление: throttling, quarantine, submit_uncertain, reset операций и checkpoint recovery."
       },
       {
-        src: "../images/hhbot/transport_models.png",
+        src: "../images/hhbot/transport_models.webp",
         alt: "Типизированные transport contracts HHBot",
         caption: "Типизированные transport contracts: единые dataclass-модели для вакансий, деталей, черновиков отклика, результатов submit, статусов и inbox-сообщений."
       },
       {
-        src: "../images/hhbot/350DFD75-6697-4829-858E-FCC9753E9AF5.png",
+        src: "../images/hhbot/350DFD75-6697-4829-858E-FCC9753E9AF5.webp",
         alt: "SQLite audit-log отправленных откликов HHBot",
         caption: "SQLite audit-log: vacancy_id, вакансия, ссылка, статус, время отправки и текст сопроводительного письма для антидублей и восстановления."
       },
       {
-        src: "../images/hhbot/0475968B-3A09-4291-A3E5-55B249D4E2EC.png",
+        src: "../images/hhbot/0475968B-3A09-4291-A3E5-55B249D4E2EC.webp",
         alt: "Терминальный запуск HHBot с поиском вакансий и генерацией письма",
         caption: "Runtime pipeline: поиск, анализ описания, извлечение требований через GPT и генерация персонализированного письма."
       }
@@ -349,32 +349,32 @@ const PROJECTS = [
     status: "Portfolio repo",
     images: [
       {
-        src: "../images/legalbot/Orcestrator3.png",
+        src: "../images/legalbot/Orcestrator3.webp",
         alt: "Runtime-flow process_message Legal Bot",
         caption: "Runtime-flow обработки сообщения: состояние диалога, LLM-анализ, дедупликация, обновление фактов и переход по FSM."
       },
       {
-        src: "../images/legalbot/Tg.png",
+        src: "../images/legalbot/Tg.webp",
         alt: "Telegram fake gateway для тестирования Legal Bot",
         caption: "Telegram fake gateway позволяет тестировать Avito Legal Bot в реальном времени без боевого Avito-чата."
       },
       {
-        src: "../images/legalbot/Orcestrator1.png",
+        src: "../images/legalbot/Orcestrator1.webp",
         alt: "orchestrator.py зависимости Legal Bot",
         caption: "orchestrator.py связывает LLM-анализ, FSM, storage и обработку фактов в единый pipeline."
       },
       {
-        src: "../images/legalbot/Orcestrator2.png",
+        src: "../images/legalbot/Orcestrator2.webp",
         alt: "AnswerOrchestrator Legal Bot",
         caption: "AnswerOrchestrator управляет циклом обработки сообщения: LLM-анализ → обновление лида → FSM-решение → ответ клиенту."
       },
       {
-        src: "../images/legalbot/table.png",
+        src: "../images/legalbot/table.webp",
         alt: "Google Sheets CRM-таблица Legal Bot",
         caption: "Google Sheets CRM: один диалог клиента превращается в структурированную строку с контактом, городом, документами, временем связи и статусом."
       },
       {
-        src: "../images/legalbot/4A19468C-24CA-4BD0-849A-C5868588CE10.png",
+        src: "../images/legalbot/4A19468C-24CA-4BD0-849A-C5868588CE10.webp",
         alt: "Рабочий экран Legal Bot с данными проекта",
         caption: "Рабочий контур проекта: входящие данные, состояние диалога и техническая диагностика обработки лида."
       }
