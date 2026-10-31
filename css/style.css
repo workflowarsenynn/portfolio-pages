@@ -1254,6 +1254,11 @@ button {
   grid-column: span 2;
 }
 
+/* Нечётное число обычных карточек: последняя занимает всю строку, чтобы сетка не оставляла пустую ячейку. */
+.case-card:not(.featured-case):nth-child(even):last-child {
+  grid-column: 1 / -1;
+}
+
 .case-card-button {
   display: grid;
   width: 100%;
@@ -1521,6 +1526,27 @@ button {
   background: #111;
 }
 
+.proof-video figcaption a {
+  color: var(--accent-navy);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.proof-video figcaption a:hover {
+  text-decoration: underline;
+}
+
+/* Вертикальное видео с телефона: узкая колонка вместо растянутого кадра. */
+.proof-video.proof-video-portrait {
+  justify-self: start;
+  width: min(100%, 360px);
+}
+
+.proof-video-portrait video {
+  max-height: none;
+  aspect-ratio: 540 / 1170;
+}
+
 .proof-video figcaption {
   border-top: 0.5px solid var(--border);
   padding: 12px 14px;
@@ -1571,6 +1597,80 @@ button {
 
 .system-modules {
   margin-top: 34px;
+}
+
+/* Файлы проекта (конфиги для просмотра/скачивания) — визуально как module-card. */
+.case-files {
+  margin-top: 34px;
+}
+
+.case-files-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.case-file-card {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  border: 0.5px solid var(--border);
+  border-radius: 8px;
+  padding: 22px;
+  background: var(--bg-page);
+}
+
+.case-file-card h4 {
+  margin: 0;
+  color: var(--accent-navy);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+.case-file-card p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.case-file-card code {
+  justify-self: start;
+  padding: 3px 7px;
+  border-radius: 4px;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-size: 12px;
+}
+
+.case-file-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.case-file-actions a {
+  padding: 7px 12px;
+  border: 0.5px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-card);
+  color: var(--accent-navy);
+  font-size: 13px;
+  text-decoration: none;
+  transition: border-color 0.14s ease, background 0.14s ease;
+}
+
+.case-file-actions a:hover {
+  border-color: var(--border-hover);
+  background: var(--bg-hover);
+}
+
+@media (max-width: 768px) {
+  .case-files-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .case-section-head {
