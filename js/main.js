@@ -1247,6 +1247,7 @@ const PROJECTS = [
         mp4: "../images/livecontext/video/demo.mp4",
         webm: "../images/livecontext/video/demo.webm",
         poster: "../images/livecontext/video/demo-poster.webp",
+        link: { label: "Пост с видео в Telegram-канале", url: "https://t.me/annsflow/189" },
         caption: "Реальный звонок по претензии о недоставленном заказе: LiveContext анализирует разговор в реальном времени и передаёт его в модель вместе с контекстом проекта из Obsidian — модель подсказывает формулировки и следующие вопросы, пока разговор ещё идёт."
       }
     ],
