@@ -1381,6 +1381,20 @@ button {
   object-position: top left;
 }
 
+/* Обложки проектов: вписываются целиком, без обрезки (image.fit = "contain"). */
+.proof-image-contain {
+  background: #0b0b0b;
+}
+
+.proof-image-contain img {
+  object-fit: contain;
+  object-position: center;
+}
+
+.proof-image-contain figcaption {
+  background: var(--bg-card);
+}
+
 .proof-image figcaption {
   border-top: 0.5px solid var(--border);
   padding: 9px 11px;

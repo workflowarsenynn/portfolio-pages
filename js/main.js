@@ -687,16 +687,19 @@ const PROJECTS = [
     images: [
       {
         src: "../images/mac/karabiner-hammerspoon.webp",
+        fit: "contain",
         alt: "Иконки Karabiner-Elements и Hammerspoon — два уровня Mac Automation Stack",
         caption: "Связка Karabiner + Hammerspoon: Karabiner отвечает за ввод, Hammerspoon — за логику и сценарии."
       },
       {
         src: "../images/mac/karabiner.webp",
+        fit: "contain",
         alt: "Иконка Karabiner-Elements — уровень ввода в Mac Automation Stack",
         caption: "Karabiner-Elements: модульные JSON-правила превращают физические клавиши в чистые сигналы — Hyper, F17, F18."
       },
       {
         src: "../images/mac/hammerspoon.webp",
+        fit: "contain",
         alt: "Иконка Hammerspoon — уровень логики в Mac Automation Stack",
         caption: "Hammerspoon: Lua-конфиг слушает сигналы и выполняет сценарии — окна, медиа, мониторы, HTTP-пульт и MIDI."
       }
@@ -860,6 +863,7 @@ const PROJECTS = [
       },
       {
         src: "../images/voxbase/voxbase-cover.webp",
+        fit: "contain",
         alt: "Обложка проекта VoxBase",
         caption: "VoxBase — голос, видео и подкасты как часть рабочей памяти."
       }
@@ -1008,6 +1012,7 @@ const PROJECTS = [
       },
       {
         src: "../images/without-streaming/cover.webp",
+        fit: "contain",
         alt: "Логотип Without Streaming — радиостанции из Telegram-канала",
         caption: "Without Streaming: музыкальный Telegram-канал, который стал радиостанцией с одним общим эфиром."
       }
@@ -1253,17 +1258,8 @@ const PROJECTS = [
     ],
     images: [
       {
-        src: "../images/livecontext/live-hint-claim.webp",
-        alt: "Подсказка LiveContext во время звонка с номером претензии и сроками из контекста проекта",
-        caption: "Подсказка во время звонка: модель уже знает номер претензии, установленный срок передачи товара и формулирует точные вопросы оператору."
-      },
-      {
-        src: "../images/livecontext/live-hint-next-step.webp",
-        alt: "LiveContext предлагает следующий шаг разговора и формулировку для фиксации в обращении",
-        caption: "Следующий шаг: готовая формулировка для фиксации в обращении и вопрос, который нужно задать, прежде чем завершать разговор."
-      },
-      {
         src: "../images/livecontext/cover.webp",
+        fit: "contain",
         alt: "Схема LiveContext: два голосовых потока, обработка и вывод контекста на экран",
         caption: "LiveContext: два голосовых потока сходятся в одну систему, которая выводит нужный контекст прямо во время разговора."
       }
@@ -1368,6 +1364,7 @@ const PROJECTS = [
     images: [
       {
         src: "../images/mcp/cover.webp",
+        fit: "contain",
         alt: "Схема Obsidian MCP: LLM, Cloudflare, VPS, SSH-туннель, Mac и Obsidian vault",
         caption: "Путь запроса: внешняя LLM → Cloudflare → VPS → reverse SSH → MCP-сервер на Mac → Obsidian vault, который остаётся локальным."
       }
@@ -1476,7 +1473,7 @@ function imageMarkup(image, className = "") {
     return `<div class="proof-placeholder ${className}"><span>Proof image</span><small>Скриншот будет добавлен</small></div>`;
   }
   return `
-    <figure class="proof-image ${className}" data-lightbox-src="${escapeHtml(image.src)}" data-lightbox-alt="${escapeHtml(image.alt)}" data-lightbox-caption="${escapeHtml(image.caption)}" tabindex="0" role="button" aria-label="Открыть изображение крупно: ${escapeHtml(image.caption)}">
+    <figure class="proof-image${image.fit === "contain" ? " proof-image-contain" : ""} ${className}" data-lightbox-src="${escapeHtml(image.src)}" data-lightbox-alt="${escapeHtml(image.alt)}" data-lightbox-caption="${escapeHtml(image.caption)}" tabindex="0" role="button" aria-label="Открыть изображение крупно: ${escapeHtml(image.caption)}">
       <img src="${image.src}" alt="${escapeHtml(image.alt)}" loading="lazy">
       <figcaption>${escapeHtml(image.caption)}</figcaption>
     </figure>
